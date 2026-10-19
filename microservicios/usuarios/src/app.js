@@ -22,6 +22,29 @@ app.get('/usuarios', async (req, res) => {
     }
 });
 
+// Consultar un usuario por ID
+app.get('/usuarios/:id', async (req, res) => {
+    try {
+        const result = await pool.query(
+            'SELECT * FROM usuarios WHERE id = $1',
+            [req.params.id]
+        );
+
+        if (result.rowCount === 0) {
+            return res.status(404).json({
+                error: 'Usuario no encontrado'
+            });
+        }
+
+        res.json(result.rows[0]);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            error: 'Error al consultar usuario'
+        });
+    }
+});
+
 // Crear un usuario
 app.post('/usuarios', async (req, res) => {
     const { nombre, email } = req.body;
