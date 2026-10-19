@@ -49,7 +49,7 @@ app.get('/productos', async (req, res) => {
 
 app.get('/pedidos', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM pedido');
+        const result = await pool.query('SELECT * FROM pedidos');
         res.json(result.rows);
     } catch (error) {
         console.error(error);
