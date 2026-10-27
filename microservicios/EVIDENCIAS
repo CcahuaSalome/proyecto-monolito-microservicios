@@ -1,0 +1,6 @@
+# Evidencias del último laboratorio - Semana 11
+## Monitoreo de microservicios con Grafana y Prometheus
+Se implementó el monitoreo del clúster de Kubernetes mediante Prometheus y Grafana.
+La métrica `up` permite observar el estado de los objetivos supervisados por Prometheus.
+## Evidencia
+El dashboard de Grafana muestra las métricas recopiladas por Prometheus.
