@@ -4,4 +4,4 @@ Se implementó el monitoreo del clúster de Kubernetes mediante Prometheus y Gra
 La métrica `up` permite observar el estado de los objetivos supervisados por Prometheus.
 ## Evidencia
 El dashboard de Grafana muestra las métricas recopiladas por Prometheus.
-<https://github.com/user-attachments/assets/cde7e59a-4e8a-4ae9-8ff0-87aa2a423111>
+(https://github.com/user-attachments/assets/cde7e59a-4e8a-4ae9-8ff0-87aa2a423111)
